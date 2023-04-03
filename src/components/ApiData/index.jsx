@@ -48,6 +48,7 @@ function ApiData() {
     return <div>Something went wrong</div>;
   }
 
+
   return     <div className={styles.product_container}>
   {data.map((product) => 
     <div 
@@ -59,7 +60,8 @@ function ApiData() {
       <p>{product.description}</p>
       
       <div className={styles.product_item__lower}>
-        <p>{product.price}</p>
+        <p>{product.price === product.discountedPrice ? `Price: ${product.price}`: `SALE: ${product.discountedPrice}!` }</p>
+        <p>{product.price !== product.discountedPrice? `Save ${product.price-product.discountedPrice}` : ""}</p>
       <Link to={`${url}/${product.id}`}><button className={styles.btn_read_more}>Read more</button></Link>
         
       </div>

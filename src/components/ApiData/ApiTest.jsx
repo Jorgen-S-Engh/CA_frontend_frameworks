@@ -40,6 +40,15 @@ function ApiTest() {
     return <div>Error</div>;
   }
 
+  data.map((product) =>{
+
+    const discount = product.price - product.discountedPrice
+    console.log(discount)
+    // if(product.price === product.discountedPrice){
+    //   console.log()
+    // }
+  })
+
 
   return     <div>
   {data.map((product) => 
