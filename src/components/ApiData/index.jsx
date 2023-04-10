@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import styles from "./ApiData.module.scss";
 
+
 const url = "https://api.noroff.dev/api/v1/online-shop";
 
 function getData(url) {
@@ -61,8 +62,9 @@ function ApiData() {
       
       <div className={styles.product_item__lower}>
         <p>{product.price === product.discountedPrice ? `Price: ${product.price}`: `SALE: ${product.discountedPrice}!` }</p>
-        <p>{product.price !== product.discountedPrice? `Save ${product.price-product.discountedPrice}` : ""}</p>
-      <Link to={`${url}/${product.id}`}><button className={styles.btn_read_more}>Read more</button></Link>
+        <p>{product.price !== product.discountedPrice? `Save ${(product.price-product.discountedPrice).toFixed(2)}` : ""}</p>
+      <Link to={`product/${product.id}`}><button className={styles.btn_read_more}>Read more</button></Link>
+      <p>Reviews: {product.reviews.length > 0 ? product.reviews.length : "0"}</p>
         
       </div>
     </div>

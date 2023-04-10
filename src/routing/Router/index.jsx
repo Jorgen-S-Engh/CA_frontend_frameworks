@@ -14,7 +14,7 @@ function Router() {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="contactPage" element={<ContactPage/>} />
-        <Route path="/:id" element={<ProductPage />} />
+        <Route path="product/:id" element={<ProductPage />} />
         <Route path="*" element={<div>Page not found</div>} />
       </Route>
     </Routes>
