@@ -4,7 +4,7 @@ import ApiData from '../../components/ApiData'
 function HomePage() {
   return (
     <div>
-      <h1>Welcome to home</h1>
+      <h1>Featured Products</h1>
       <ApiData/>
       
       

@@ -64,15 +64,17 @@
 }
 
 .add_to_cart__btn {
-  background-color: #0066cc;
+  background-color: #003366;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
   cursor: pointer;
+  margin:20px;
+
+  &:hover{
+    background-color: lightseagreen;
+  }
 }
 
-.add_to_cart__btn:hover {
-  background-color: #0059b3;
-}

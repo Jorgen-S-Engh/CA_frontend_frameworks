@@ -4,6 +4,7 @@ import ProductPage from '../../pages/ProductPage';
 import Layout from '../../components/Layout';
 import HomePage from '../../pages/Homepage';
 import ContactPage from '../../pages/ContactPage';
+import CheckoutPage from '../../pages/CheckoutPage';
 
 
 
@@ -15,6 +16,7 @@ function Router() {
         <Route index element={<HomePage />} />
         <Route path="contactPage" element={<ContactPage/>} />
         <Route path="product/:id" element={<ProductPage />} />
+        <Route path="checkoutPage" element={<CheckoutPage/>} />
         <Route path="*" element={<div>Page not found</div>} />
       </Route>
     </Routes>

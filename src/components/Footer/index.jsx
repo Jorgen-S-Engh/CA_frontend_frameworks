@@ -10,7 +10,7 @@ function Footer() {
       <p>Est 2023</p>
       <div className={styles.footer_links}>
         <Link to="/">Home</Link>
-        <Link to="/productPage">Products</Link>
+        {/* <Link to="/productPage">Products</Link> */}
         <Link to="/contactPage">Contact</Link>
       </div>
     </footer>
