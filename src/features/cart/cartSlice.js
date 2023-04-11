@@ -43,6 +43,12 @@ const cartSlice = createSlice({
   },
 });
 
+export const purchaseItems = () => (dispatch, getState) => {
+  const items = getState().cart.items;
+  dispatch(removeAllItems());
+  return items;
+};
+
 export const { addItem, incrementQuantity, decrementQuantity, removeAllItems } =
   cartSlice.actions;
 

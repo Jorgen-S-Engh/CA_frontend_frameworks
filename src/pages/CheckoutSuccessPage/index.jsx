@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeAllItems } from '../../features/cart/cartSlice';
+import { purchaseItems } from '../../features/cart/cartSlice';
 import styles from './CheckoutSuccessPage.module.scss';
 
 function CheckoutSuccessPage() {
@@ -9,8 +10,11 @@ function CheckoutSuccessPage() {
   const [purchasedItems, setPurchasedItems] = useState([]);
 
   useEffect(() => {
-    setPurchasedItems(cartItems);
-    dispatch(removeAllItems());
+    if (cartItems.length > 0) {
+      const items = dispatch(purchaseItems());
+      setPurchasedItems(items);
+    }
+
   }, []);
 
   return (
