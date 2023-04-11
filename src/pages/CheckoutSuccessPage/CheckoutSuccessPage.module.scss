@@ -1,0 +1,23 @@
+.checkoutSuccess {
+  padding: 1rem;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.image {
+  max-width: 100px;
+  margin-right: 1rem;
+}
+
+.itemInfo {
+  flex-grow: 1;
+}

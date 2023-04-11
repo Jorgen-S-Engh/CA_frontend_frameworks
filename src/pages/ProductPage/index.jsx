@@ -1,5 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../features/cart/cartSlice';
 import styles from "./ProductPage.module.scss";
 
 
@@ -8,6 +10,12 @@ function ProductPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   let { id } = useParams();
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    dispatch(addItem(data));
+  };
 
 
   useEffect(() => {
@@ -60,7 +68,7 @@ function ProductPage() {
       <p className={styles.price}>{data.price===data.discountedPrice ? `Price ${data.price}` : `Sale! Now only ${data.discountedPrice}`}</p>
       <p className={styles.discount_price}>{data.price!==data.discountedPrice ? `Save ${(data.price-data.discountedPrice.toFixed(2))}`: ""}</p>
       <div className={styles.add_to_cart}>
-        <button className={styles.add_to_cart__btn}>Add to cart</button>
+        <button className={styles.add_to_cart__btn} onClick={handleAddToCart}>Add to cart</button>
       </div>
 
     </div>
