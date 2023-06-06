@@ -1,6 +1,6 @@
 # CA_frontend_frameworks
 
-# Holidaze | Project-Exam-2
+# Easy Buy | Course assignment 
 
 ## Description
 
