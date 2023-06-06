@@ -23,7 +23,7 @@ Please feel free to check out the live demo [here](https://grand-sundae-549d05.n
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/Jorgen-S-Engh/Project_exam_2_J-rgen_Engh.git
+git clone https://github.com/Jorgen-S-Engh/CA_frontend_frameworks.git
 ```
 
 2.
