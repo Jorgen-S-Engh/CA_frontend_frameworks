@@ -1,5 +1,3 @@
-# CA_frontend_frameworks
-
 # Easy Buy | Course assignment 
 
 ## Description
@@ -32,6 +30,3 @@ git clone https://github.com/Jorgen-S-Engh/CA_frontend_frameworks.git
 - npm run build
 
 
-## Future improvments
-
-- The design for desktop interfaces in this project could benefit from further enhancements. This project was primarily developed with a mobile-first approach, which, while ensuring an optimized mobile experience, may have inadvertently impacted the desktop design aesthetics. I acknowledge there's room for improvement in this area for a more balanced user experience across all platforms.
